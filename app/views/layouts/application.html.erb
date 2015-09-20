@@ -12,9 +12,9 @@
 <p class="alert"><%= alert %></p>
 
 <% if user_signed_in? %>
-  <%= link_to('Log out', destroy_user_session_path, :method => :delete, :class => 'capitalize_first') %>        
+  <%= button_to('Log out', destroy_user_session_path, :method => :delete, :class => 'capitalize_first') %>
 <% else %>
-  <%= link_to('Log in', new_user_session_path, :class => 'capitalize_first')  %>  
+  <%= button_to('Log in', new_user_session_path, :class => 'capitalize_first')  %>
 <% end %>
 
 <%= yield %>
