@@ -1,0 +1,43 @@
+<h1>Listing targets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>User</th>
+    <th>Parser url</th>
+    <th>Endpoint url</th>
+    <th>Graph url</th>
+    <th>Dictionary url</th>
+    <th>Max hop</th>
+    <th>Ignore predicates</th>
+    <th>Sortal predicates</th>
+    <th>Sample queries</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @targets.each do |target| %>
+  <tr>
+    <td><%= target.name %></td>
+    <td><%= target.description %></td>
+    <td><%= target.user %></td>
+    <td><%= target.parser_url %></td>
+    <td><%= target.endpoint_url %></td>
+    <td><%= target.graph_url %></td>
+    <td><%= target.dictionary_url %></td>
+    <td><%= target.max_hop %></td>
+    <td><%= target.ignore_predicates %></td>
+    <td><%= target.sortal_predicates %></td>
+    <td><%= target.sample_queries %></td>
+    <td><%= link_to 'Show', target %></td>
+    <td><%= link_to 'Edit', edit_target_path(target) %></td>
+    <td><%= link_to 'Destroy', target, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Target', new_target_path %>

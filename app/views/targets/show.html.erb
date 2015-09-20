@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @target.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @target.description %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @target.user %>
+</p>
+
+<p>
+  <b>Parser url:</b>
+  <%= @target.parser_url %>
+</p>
+
+<p>
+  <b>Endpoint url:</b>
+  <%= @target.endpoint_url %>
+</p>
+
+<p>
+  <b>Graph url:</b>
+  <%= @target.graph_url %>
+</p>
+
+<p>
+  <b>Dictionary url:</b>
+  <%= @target.dictionary_url %>
+</p>
+
+<p>
+  <b>Max hop:</b>
+  <%= @target.max_hop %>
+</p>
+
+<p>
+  <b>Ignore predicates:</b>
+  <%= @target.ignore_predicates %>
+</p>
+
+<p>
+  <b>Sortal predicates:</b>
+  <%= @target.sortal_predicates %>
+</p>
+
+<p>
+  <b>Sample queries:</b>
+  <%= @target.sample_queries %>
+</p>
+
+
+<%= link_to 'Edit', edit_target_path(@target) %> |
+<%= link_to 'Back', targets_path %>
